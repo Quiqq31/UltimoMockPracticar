@@ -49,4 +49,17 @@ public class DataService {
         return newVehicle;
     }
 
+    public static boolean deleteVehicle(String licensePlate) throws IOException, InterruptedException{
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+            .uri(URI.create("http://localhost:8080/vehicles/" + licensePlate))
+            .DELETE()
+            .build();
+    
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        System.out.println(response.body());
+        
+        return Boolean.parseBoolean(response.body());
+    }
+
 }
