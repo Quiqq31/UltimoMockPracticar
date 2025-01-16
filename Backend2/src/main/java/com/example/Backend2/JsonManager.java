@@ -14,7 +14,6 @@ public class JsonManager {
 
 
     public ArrayList<Vehicle> getVehicles() throws IOException{
-
         String path = "src/main/resources/vehicles.json";
         String jsonContent = new String(Files.readAllBytes(Paths.get(path)));
 

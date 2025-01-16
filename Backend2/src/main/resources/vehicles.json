@@ -1,0 +1,101 @@
+[
+    {
+        "make": "Audi",
+        "model": "Q7",
+        "year": 2023,
+        "type": "SUV",
+        "licensePlate": "AUD-9012",
+        "id": "f6g8i1h2-4j6f-7k1j-2g8e-9012mnop5678",
+        "availability": false
+    },
+    {
+        "make": "BMW",
+        "model": "X5",
+        "year": 2020,
+        "type": "SUV",
+        "licensePlate": "BMW-1234",
+        "id": "d4e6g9f0-2h4d-5i9h-0e6c-7890efgh3456",
+        "availability": false
+    },
+    {
+        "make": "Chevrolet",
+        "model": "Malibu",
+        "year": 2018,
+        "type": "Sedan",
+        "licensePlate": "CHE-6789",
+        "id": "a1f3d6b7-9e5c-4b0d-8d3a-7890qrst5678",
+        "availability": true
+    },
+    {
+        "make": "Ford",
+        "model": "F-150",
+        "year": 2020,
+        "type": "Truck",
+        "licensePlate": "ABC-9876",
+        "id": "e3b8b9f2-3c91-4e6e-a4b8-5678efgh9101",
+        "availability": false
+    },
+    {
+        "make": "Ford",
+        "model": "Mustang",
+        "year": 1999,
+        "type": "Sedan",
+        "licensePlate": "CAR-3333",
+        "id": "76f785ea-f472-4017-b646-0f4c88900371",
+        "availability": false
+    },
+    {
+        "make": "Honda",
+        "model": "CR-V",
+        "year": 2019,
+        "type": "SUV",
+        "licensePlate": "LMN-4567",
+        "id": "c9a2d4e3-1f09-4b4c-8c1a-2345ijkl7890",
+        "availability": true
+    },
+    {
+        "make": "Jeep",
+        "model": "Wrangler",
+        "year": 2021,
+        "type": "SUV",
+        "licensePlate": "JEE-7890",
+        "id": "c3d5f8e9-1g3c-4h8g-9d5b-6789abcd2345",
+        "availability": true
+    },
+    {
+        "make": "Mercedes-Benz",
+        "model": "C-Class",
+        "year": 2019,
+        "type": "Sedan",
+        "licensePlate": "MBZ-5678",
+        "id": "e5f7h0g1-3i5e-6j0i-1f7d-8901ijkl4567",
+        "availability": true
+    },
+    {
+        "make": "Nissan",
+        "model": "Altima",
+        "year": 2022,
+        "type": "Sedan",
+        "licensePlate": "NIS-3456",
+        "id": "b2c4d7e8-0f2b-4e7f-9c4a-4567uvwz9012",
+        "availability": false
+    },
+    {
+        "make": "Tesla",
+        "model": "Model 3",
+        "year": 2023,
+        "type": "Sedan",
+        "licensePlate": "TES-2023",
+        "id": "d7f2a9e4-2b1c-4d6f-9a3b-3456mnop1234",
+        "availability": false
+    },
+    {
+        "make": "Toyota",
+        "model": "Camry",
+        "year": 2021,
+        "type": "Sedan",
+        "licensePlate": "XYZ-1234",
+        "id": "b6e8b6d3-5c29-4d91-9b63-1234abcd5678",
+        "availability": true
+    }
+]
