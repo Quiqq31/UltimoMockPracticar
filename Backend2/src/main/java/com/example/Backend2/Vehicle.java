@@ -66,7 +66,7 @@ public class Vehicle {
         return uuid;
     }
 
-    public boolean isAvailability() {
+    public boolean getAvailability() {
         return availability;
     }
 
