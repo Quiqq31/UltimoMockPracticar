@@ -3,6 +3,7 @@ package com.example.Backend2;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,13 +25,15 @@ public class VehicleController {
         JsonManager manager = new JsonManager();
         ArrayList<Vehicle> vehicles = manager.getVehicles();
 
-        // When no data is imput correctly (before we implement the frontend)
-        newVehicle.setMake("Toyota");
-        newVehicle.setModel("Supra");
-        newVehicle.setYear(2009);
-        newVehicle.setType("Sedan");
-        newVehicle.setLicensePlate("SUP-8888");
-        newVehicle.setAvailability(true);
+        //When no data is imput correctly (before we implement the frontend)
+        if(newVehicle.getYear() == 0){
+            newVehicle.setMake("Toyota");
+            newVehicle.setModel("Supra");
+            newVehicle.setYear(2009);
+            newVehicle.setType("Sedan");
+            newVehicle.setLicensePlate("SUP-8888");
+            newVehicle.setAvailability(true);
+        }
         // uuid is generated automatically in the Vehicle class constructor
 
         vehicles.add(newVehicle);
@@ -38,8 +41,8 @@ public class VehicleController {
         return vehicles;
     }
 
-    @PostMapping("/vehicles/{licensePlate}")
-    public String deletVehicle(@PathVariable String licensePlate) throws IOException {
+    @DeleteMapping("/vehicles/{licensePlate}")
+    public boolean deletVehicle(@PathVariable String licensePlate) throws IOException {
         JsonManager manager = new JsonManager();
         ArrayList<Vehicle> vehiclesList = manager.getVehicles();
         ArrayList<Vehicle> newVehicles = new ArrayList<Vehicle>();
@@ -54,8 +57,11 @@ public class VehicleController {
         }
 
         manager.saveVehicles(newVehicles);
-        
-        return new String("Vehicle deleted successfully");
+        if(deletedVehicles.size() > 0){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
