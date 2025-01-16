@@ -20,12 +20,22 @@ public class VehicleController {
     }
 
     @PostMapping("/vehicles")
-    public Vehicle createVehicle(@RequestBody Vehicle newVehicle) throws IOException {
+    public ArrayList<Vehicle> createVehicle(@RequestBody Vehicle newVehicle) throws IOException {
         JsonManager manager = new JsonManager();
         ArrayList<Vehicle> vehicles = manager.getVehicles();
+
+        // When no data is imput correctly (before we implement the frontend)
+        newVehicle.setMake("Toyota");
+        newVehicle.setModel("Supra");
+        newVehicle.setYear(2009);
+        newVehicle.setType("Sedan");
+        newVehicle.setLicensePlate("SUP-8888");
+        newVehicle.setAvailability(true);
+        // uuid is generated automatically in the Vehicle class constructor
+
         vehicles.add(newVehicle);
         manager.saveVehicles(vehicles);
-        return newVehicle;
+        return vehicles;
     }
 
     @PostMapping("/vehicles/{licensePlate}")
